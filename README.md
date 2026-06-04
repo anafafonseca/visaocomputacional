@@ -1,6 +1,6 @@
 # RadIA Triage Platform
 
-> Plataforma de inteligência hospitalar que integra análise de imagens radiológicas por IA com predição de sobrecarga operacional em um pipeline único.
+> Plataforma de inteligência hospitalar que integra análise de imagens radiológicas por IA com predição de sobrecarga operacional hospitalar.
 
 **Status:** Prova de conceito - em desenvolvimento
 
@@ -24,17 +24,20 @@ O diferencial está na conexão entre as três camadas: os achados radiológicos
 
 Este repositório contém a prova de conceito da camada de predição operacional (ICOH) e o esqueleto da API de análise radiológica.
 
-```
+```text
 radia-triage-platform/
 ├── app/
-│   ├── icoh_simulation.py     # Simulação do ICOH com dados sintéticos
-│   ├── icoh_model.py          # Lógica do índice e predição 6h
 │   └── api.py                 # FastAPI — endpoints da plataforma
+├── src/
+│   ├── icoh_simulation.py     # Simulação do ICOH com dados sintéticos
+│   └── icoh_model.py          # Lógica do índice e predição 6h
 ├── notebooks/
 │   └── icoh_demo.ipynb        # Demonstração do índice
 ├── docs/
 │   ├── arquitetura.md
 │   └── icoh.md
+├── assets/
+│   └── icoh_output.png
 └── requirements.txt
 ```
 
@@ -44,7 +47,7 @@ radia-triage-platform/
 
 ```bash
 pip install -r requirements.txt
-python app/icoh_simulation.py
+python src/icoh_simulation.py
 ```
 
 A simulação gera 72 horas de dados operacionais sintéticos de um pronto-socorro (ocupação de leitos, exames críticos pendentes, tempo médio de espera, volume de admissões) e calcula o ICOH hora a hora, com predição rolante para as próximas 6 horas. Saída visual em `assets/icoh_output.png`.
