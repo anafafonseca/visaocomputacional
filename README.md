@@ -2,7 +2,7 @@
 
 > Plataforma de inteligência hospitalar que integra análise de imagens radiológicas por IA com predição de sobrecarga operacional em um pipeline único.
 
-**Status:** Prova de conceito — em desenvolvimento
+**Status:** Prova de conceito - em desenvolvimento
 
 **Autores:** Anderson Ferreira dos Santos · Ana Flavia Arcanjo da Fonseca
 
